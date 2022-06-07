@@ -49,6 +49,22 @@ class ChatRepo {
           .where(FirebaseStrings.userIDs, arrayContains: userToken)
           .get();
 
+      /*
+        FirebaseFirestore.instance
+        .collection('users')
+        .doc(userId)
+        .get()
+        .then((DocumentSnapshot documentSnapshot) {
+      if (documentSnapshot.exists) {
+        friendList = documentSnapshot.get('friends');
+        return friendList;
+      } else {
+        return null;
+        //print('Document does not exist on the database');
+      }
+    });
+      * */
+
       List<ChatItem> chatItems = [];
       for (int i = 0; i < conversations.docs.length; i++) {
         var conversation = conversations.docs[i];
