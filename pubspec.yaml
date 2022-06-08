@@ -39,6 +39,7 @@ dependencies:
   #For authentication
   firebase_auth: ^3.3.19
   firebase_core: ^1.17.1
+  google_sign_in: ^5.3.3
 
   # For message Module
   cloud_firestore: ^3.1.17

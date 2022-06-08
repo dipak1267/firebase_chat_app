@@ -9,13 +9,14 @@ import 'package:uuid/uuid.dart';
 
 ///Firebase Firestore Table Schema
 ///-users(collection)
-///   -user_token(document)->set userId as document name
+///   -user_token(document)->set user_token as document name
+///       -user_token(string)
 ///       -email(string)
 ///       -first_name(string)
 ///       -last_name(string)
 ///       -profile_image(string)
-///       -user_token(string)
-///       -user_name(string)
+///       -loin_type(string)
+///       -user_bio(string)
 ///-Conversations(collection)
 ///   -userToken1_userToken2(document)
 ///       -chat_id(string)->same as document name userToken1_userToken2
@@ -87,7 +88,7 @@ class ChatRepo {
             lastName: opoUserItem.lastName,
             profileImage: opoUserItem.profileImage,
             userToken: opoUserItem.userToken,
-            userName: opoUserItem.userName,
+            userName: opoUserItem.userFirstName + opoUserItem.userLastName,
             chatId: conversation[FirebaseStrings.chatId],
           );
           chatItem.lastMessage.value =

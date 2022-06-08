@@ -9,8 +9,9 @@ class FirebaseStrings {
   static const String userEmail = "email";
   static const String userFirstName = "first_name";
   static const String userLastName = "last_name";
+  static const String userBio = "user_bio";
   static const String userProfileImage = "profile_image";
-  static const String userName = "user_name";
+  static const String loinType = "loin_type";
 
   /// message Strings
   static const String chatId = "chat_id";

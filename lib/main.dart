@@ -1,8 +1,12 @@
 import 'package:chat_demo/global.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await preferences.init();
+  Firebase.initializeApp();
   runApp(const ChatApp());
 }
 
@@ -15,7 +19,7 @@ class ChatApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Chat Demo',
       getPages: Routes.pages,
-      home: SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }
